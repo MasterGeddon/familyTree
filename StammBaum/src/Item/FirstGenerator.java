@@ -77,8 +77,11 @@ public class FirstGenerator {
 				flagM = 0;
 			}
 			if (bezi.getFemale().getAlive() < maxAge) {
+				
+			}else {
 				sleepingDead.add(bezi.getFemale());
 				bezi.setFemale(null);
+				flagF=0;
 			}
 			if (flagM == 0 && flagF != 0) {
 				bezi.getFemale().setPartner(null);

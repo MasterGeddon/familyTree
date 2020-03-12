@@ -2,8 +2,11 @@ package Item;
 
 public class beziehungsItem {
 
+	
+	// beziehungspartner 1
 	public personItem male ;
 
+	// beziehungspartner 2 
 	public personItem female ; 
 	
 	

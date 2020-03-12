@@ -2,11 +2,17 @@ package Item;
 
 public class Stats {
 
+	// Die 6 Grund stats
 	public int Strength, Charisma, Dexterity, Constitution, Inteligence, Wisdom = 10;
 
+	
+	// Glück für mögliche events die noch implementiert werden
 	public int Luck = 7;
+	
+	// Geisteszustand für mögliche events die noch implementiert werden
 	public int Sanity = 10;
 
+	// Stats construckter generiert stats
 	public Stats() {
 		Strength =generateStats();
 		Charisma =generateStats();
@@ -16,6 +22,7 @@ public class Stats {
 		Wisdom =generateStats();
 	}
 
+	// Strats construcktur liest stats aus , aus einem stats string
 	public Stats(String stats) {
 		Strength =generateStats(stats,1);
 		Charisma =generateStats(stats,2);
@@ -64,6 +71,7 @@ public class Stats {
 		return temp ; 
 	}
 	
+	// gibt einen stats string aus 
 	public String getStats() {
 		
 		return 	padLeftZeros(""+Strength,2)+
@@ -75,6 +83,7 @@ public class Stats {
 		
 	}
 	
+	// zu kurze stats werden hier aufbereitet für die get
 	public String padLeftZeros(String inputString, int length) {
 	    if (inputString.length() >= length) {
 	        return inputString;
@@ -88,6 +97,8 @@ public class Stats {
 	    return sb.toString();
 	}
 	
+	
+	// generiert Luck und Sanity
 	public void genLuckSan() {
 		Luck = (int)Math.random()*21;
 		Sanity = (int)Math.random()*21;
